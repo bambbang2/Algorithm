@@ -4,9 +4,7 @@ class Solution {
         String[] stringArr = my_string.split("");
         
         for (String a : stringArr) {
-            for (int i = 0; i < n; i++) {
-                answer +=  a;
-            }
+            answer += a.repeat(n);
         }
         
         return answer;
