@@ -5,7 +5,7 @@ class Solution {
         Set<Integer> set = new HashSet<>();
 
         for (int i = 0; i < numbers.length; i++) {
-            for (int j = 1; j <= numbers.length - 1; j++) {
+            for (int j = 0; j < numbers.length; j++) {
                 if (i != j) set.add(numbers[i] + numbers[j]);
             }
         }
