@@ -1,0 +1,14 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] numbers) {
+        Set<Integer> set = new HashSet<>();
+
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 1; j <= numbers.length - 1; j++) {
+                if (i != j) set.add(numbers[i] + numbers[j]);
+            }
+        }
+        return set.stream().mapToInt(i -> i).sorted().toArray();
+    }
+}
